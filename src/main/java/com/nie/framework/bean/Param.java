@@ -14,7 +14,7 @@ public class Param {
         this.paramMap = paramMap;
     }
     public long getLong(String name) {
-        return CastUtil.castInt(paramMap.get(name));
+        return CastUtil.castLong(paramMap.get(name));
     }
     public Map<String, Object> getMap() {
         return paramMap;

@@ -107,6 +107,5 @@ public class DispatcherServlet extends HttpServlet {
             }
         }
 
-        super.service(req, resp);
     }
 }

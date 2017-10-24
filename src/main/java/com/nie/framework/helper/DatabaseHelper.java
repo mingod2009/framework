@@ -41,12 +41,12 @@ public class DatabaseHelper {
         CONNECTION_HOLDER = new ThreadLocal<Connection>();
         QUERY_RUNNER = new QueryRunner();
 
-        Properties conf = PropsUtil.loadProps("config.properties");
+        Properties conf = PropsUtil.loadProps("smart.properties");
 
-        DRIVER = conf.getProperty("jdbc.driver");
-        URL = conf.getProperty("jdbc.url");
-        USERNAME = conf.getProperty("jdbc.username");
-        PASSWORD = conf.getProperty("jdbc.password");
+        DRIVER = conf.getProperty("smart.framework.jdbc.driver");
+        URL = conf.getProperty("smart.framework.jdbc.url");
+        USERNAME = conf.getProperty("smart.framework.jdbc.username");
+        PASSWORD = conf.getProperty("smart.framework.jdbc.password");
 
         DATA_SOURCE = new BasicDataSource();
         DATA_SOURCE.setDriverClassName(DRIVER);
