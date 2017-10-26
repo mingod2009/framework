@@ -1,5 +1,6 @@
 package com.nie.framework.aop.proxy.greet;
 
+import com.nie.framework.aop.proxy.aspectj.Tag;
 import org.springframework.stereotype.Component;
 
 /**
@@ -7,6 +8,7 @@ import org.springframework.stereotype.Component;
  */
 @Component("greetingImpl")
 public class GreetingImpl implements Greeting {
+    @Tag
     @Override
     public void sayHello(String name) {
         System.out.println("say: " +name);

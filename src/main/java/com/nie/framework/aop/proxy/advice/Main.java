@@ -35,5 +35,8 @@ public class Main {
         GreetingImpl greetingAop2 = (GreetingImpl) context.getBean("greetingProxy2");
         greetingAop2.goodMorning("nie");
         greetingAop2.goodNight("nie");
+
+        System.out.println("==================================");
+
     }
 }
