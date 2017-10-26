@@ -18,5 +18,8 @@ public class Main {
         System.out.println("=========================");
 
         GreetingCglib.getInstance().getProxy(GreetingImpl.class).sayHello("cglib greeting");
+
+        System.out.println("==========================");
+
     }
 }

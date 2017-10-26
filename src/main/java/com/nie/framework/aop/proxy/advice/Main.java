@@ -25,7 +25,15 @@ public class Main {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
         Greeting greetingAop =(Greeting) context.getBean("greetingProxy");
-        greeting.sayHello("spring aop");
+        greetingAop.sayHello("spring aop");
 
+        Apology apology = (Apology) greetingAop;
+        apology.saySorry("spring aop");
+
+        System.out.println("==================================");
+
+        GreetingImpl greetingAop2 = (GreetingImpl) context.getBean("greetingProxy2");
+        greetingAop2.goodMorning("nie");
+        greetingAop2.goodNight("nie");
     }
 }
